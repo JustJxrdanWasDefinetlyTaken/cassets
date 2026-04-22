@@ -22,7 +22,7 @@ const connection = ""
 //////////////////////////////
 ///           SW           ///
 //////////////////////////////
-const stockSW = "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/celestial-static-assets@latest/ultraworker.js";
+const stockSW = "/celestialisbest/ultraworker.js";
 const swAllowedHostnames = ["localhost", "127.0.0.1"];
 
 /**
@@ -64,7 +64,7 @@ const scramjet = new ScramjetController({
 			naiiveRewriter: true,
 		},
 	},
-	prefix: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/celestial-static-assets@latest/celestialisbest/scramjet/"
+	prefix: "/celestialisbest/scramjet/"
 });
 scramjet.init();
 
