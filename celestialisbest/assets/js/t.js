@@ -4,7 +4,7 @@ var grid = document.querySelector(".gs");
 var search = document.querySelector(".textbook");
 var cat = document.querySelector("select");
 
-fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/celestial-static-assets@latest/celestialisbest/assets/json/tools.json")
+fetch("/celestialisbest/pkg/json/tools.json")
   .then(res => res.json())
   .then(games => {
     function showGames(list) {

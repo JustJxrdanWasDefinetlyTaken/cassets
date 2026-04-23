@@ -92,7 +92,7 @@ function toggleFavorite(gameName) {
 }
 
 // main game func
-fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/celestial-static-assets@latest/celestialisbest/assets/json/books.json")
+fetch("/celestialisbest/pkg/json/books.json")
   .then((res) => res.json())
   .then((games) => {
     const originalGames = [...games];
@@ -135,7 +135,7 @@ fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/celestial-static-
   });
 
 function rngGame() {
-  fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/celestial-static-assets@latest/celestialisbest/assets/json/books.json")
+  fetch("/celestialisbest/pkg/json/books.json")
     .then((res) => res.json())
     .then((games) => {
       const available = games.filter(
@@ -154,7 +154,7 @@ function rngGame() {
 }
 
 function gameCount() {
-  fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/celestial-static-assets@latest/celestialisbest/assets/json/books.json")
+  fetch("/celestialisbest/pkg/json/books.json")
     .then((r) => r.json())
     .then((d) => {
       const input = document.querySelector(".textbook");
