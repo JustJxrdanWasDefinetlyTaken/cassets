@@ -9,6 +9,7 @@ navigator.serviceWorker.register = function(scriptURL, options) {
     } catch {}
     return _originalRegister(scriptURL, options);
 };
+
 //////////////////////////////
 ///          Init          ///
 //////////////////////////////
