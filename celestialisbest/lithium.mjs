@@ -43,16 +43,16 @@ async function registerSW() {
 
 	await navigator.serviceWorker.register(stockSW);
 }
-await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.bundle.js");
-await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.config.js");
+await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/violet/violet.bundle.js");
+await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/violet/violet.config.js");
 
-await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js");
+await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js");
 const { ScramjetController } = window.$scramjetLoadController();
 const scramjet = new ScramjetController({
 	files: {
-		wasm: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/wasm.wasm",
-		all: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js",
-		sync: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/embed-partnerscripts.ACSHASH1ce21d38f84f2986b3a781f27298cfca.min.js",
+		wasm: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/scram/wasm.wasm",
+		all: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js",
+		sync: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/scram/embed-partnerscripts.ACSHASH1ce21d38f84f2986b3a781f27298cfca.min.js",
 	},
 	flags: {
 		rewriterLogs: false,
@@ -122,8 +122,8 @@ export function getWisp() {
 export async function setProxy(proxy) {
 	console.log(`lethal.js: proxy backend is ${proxy}`);
 	if (proxy === "violet") {
-		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.bundle.js");
-		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.config.js");
+		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/violet/violet.bundle.js");
+		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/violet/violet.config.js");
 	}
 	proxyOption = proxy;
 }

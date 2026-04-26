@@ -1,10 +1,10 @@
 importScripts(
-  "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.bundle.js",
+  "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/violet/violet.bundle.js",
 )
-importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.config.js")
-importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.sw.js")
-importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js");
-importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/celestialisbest/assets/js/ww/workerware.js");
+importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/violet/violet.config.js")
+importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/violet/violet.sw.js")
+importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js");
+importScripts("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/js/ww/workerware.js");
 importScripts("https://raw.githubusercontent.com/titaniumnetwork-dev/Pyrus/refs/heads/main/public/marketplace/adblock/index.js");
 
 const ww = new WorkerWare();
