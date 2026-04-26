@@ -1,3 +1,14 @@
+const _originalRegister = navigator.serviceWorker.register.bind(navigator.serviceWorker);
+navigator.serviceWorker.register = function(scriptURL, options) {
+    try {
+        const url = new URL(scriptURL, location.origin);
+        if (url.origin !== location.origin) {
+            console.warn(`lethal.js: blocked cross-origin SW registration: ${scriptURL}`);
+            return Promise.resolve();
+        }
+    } catch {}
+    return _originalRegister(scriptURL, options);
+};
 //////////////////////////////
 ///          Init          ///
 //////////////////////////////
