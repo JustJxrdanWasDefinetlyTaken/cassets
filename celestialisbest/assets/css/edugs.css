@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
-@import url('https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/css/theme.css');
+@import url('/celestialisbest/assets/css/theme.css');
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -127,11 +127,17 @@ select::-ms-expand {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
     background-color: var(--pallet);
     z-index: 1;
     border-radius:6px;
+    overflow: hidden;
+}
+
+.card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .card p {

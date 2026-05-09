@@ -258,21 +258,11 @@
           <i class="bx bx-x"></i>
         </p>
         <div id="sidenav">
-          <a href="#cloak" onclick="show('cloak'); return false;"
-            ><i class="bx bxs-ghost"></i> Cl<span>oak</span>ing</a
-          >
-          <a href="#browsing" onclick="show('browsing'); return false;"
-            ><i class="bx bx-globe"></i> Pr<span>o</span>xy</a
-          >
-          <a href="#appear" onclick="show('appear'); return false;"
-            ><i class="bx bxs-palette"></i> Appearance</a
-          >
-          <a href="#ext" onclick="show('ext'); return false;"
-            ><i class="bx bx-plug"></i> Extensions</a
-          >
-          <a href="#misc" onclick="show('misc'); return false;"
-            ><i class="bx bxs-help-circle"></i> Miscancellous</a
-          >
+          <a class="cloak" href="#cloak" onclick="show('cloak'); return false;"><img src="/assets/img/icns/cloak.svg"> <span class="nav-label">Cl<span>oak</span>ing</span></a>
+          <a class="browsing" href="#browsing" onclick="show('browsing'); return false;"><img src="/assets/img/icns/globe.svg"> <span class="nav-label">Pr<span>o</span>xy</span></a>
+          <a class="appear" href="#appear" onclick="show('appear'); return false;"><img src="/assets/img/icns/palette.svg"> <span class="nav-label">Appearance</span></a>
+          <a class="ext" href="#ext" onclick="show('ext'); return false;"><img src="/assets/img/icns/puzzle.svg"> <span class="nav-label">Extensions</span></a>
+          <a class="misc" href="#misc" onclick="show('misc'); return false;"><img src="/assets/img/icns/info.svg"> <span class="nav-label">Misc</span></a>
         </div>
         <div class="stuff">
           <!--
@@ -608,23 +598,35 @@
   <nav>
     <div id="tabs">
       <button id="new-tab-btn" aria-label="new tab" title="new tab">
-        <i class="bx bx-plus"></i>
-      </button>
+          <img src="/assets/img/icns/plus.svg" alt="new tab" style="width: 19px" />
+        </button>
     </div>
   </nav>
-  <div class="tabthing">
-    <form id="form">
-      <a id="back" class="fc" onclick="back();"><i class="bx bx-caret-left"></i></a>
-      <a id="reload" class="fc" onclick="reload();"><i class="bx bx-revision"></i></a>
-      <a id="forward" class="fc" onclick="forward();"><i class="bx bx-caret-right"></i></a>
-      <input id="address" type="text" placeholder="Search privately.." onfocus="this.select()" class="search"
-        autocomplete="off" />
-      <a id="inspect" class="fc" onclick="inspect();"><i class="bx bx-code-alt"></i></a>
-      <a id="fullscreen" class="fc" onclick="full();"><i class="bx bx-fullscreen"></i></a>
-      <a id="custom" class="fc" onclick="setting();"><i class="bx bx-dots-vertical"></i></a>
-    </form>
-    <section id="frames"></section>
-  </div>
+    <div class="tabthing">
+      <form id="form">
+        <a id="back" class="fc" onclick="back();">
+          <img src="/assets/img/icns/chevron-left.svg" alt="back" style="width: 17px" />
+        </a>
+        <a id="reload" class="fc" onclick="reload();">
+          <img src="/assets/img/icns/rotate.svg" alt="reload" style="width: 17px" />
+        </a>
+        <a id="forward" class="fc" onclick="forward();">
+          <img src="/assets/img/icns/chevron-right.svg" alt="forward" style="width: 17px" />
+        </a>
+        <input id="address" type="text" placeholder="Search privately.." onfocus="this.select()" class="search"
+          autocomplete="off" />
+        <a id="inspect" class="fc" onclick="inspect();">
+          <img src="/assets/img/icns/code.svg" alt="inspect" style="width: 17px" />
+        </a>
+        <a id="fullscreen" class="fc" onclick="full();">
+          <img src="/assets/img/icns/expand.svg" alt="fullscreen" style="width: 17px" />
+        </a>
+        <a id="custom" class="fc" onclick="setting();">
+          <img src="/assets/img/icns/dots.svg" alt="settings" style="width: 17px" />
+        </a>
+      </form>
+      <section id="frames"></section>
+    </div>
   </div>
   <script type="module">
     import { currentFrame } from "./lithium.mjs";
