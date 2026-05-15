@@ -30,7 +30,7 @@ function showGames(list) {
      * just math and the size of it is pretty small, it shouldn't really matter much
      */
     let cardHTML = `
-    <div class="thumb" style="background-image:url('${g.img}')"></div>
+    <div class="thumb"><img decoding="async" src="${g.img}" alt="${g.name}"></div>
     <p>${g.name}</p>
     <svg class="favoriteBook" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"> <path d="${heartPath}"/> </svg>
 
