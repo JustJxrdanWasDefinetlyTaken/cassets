@@ -1,3 +1,15 @@
+const _originalRegister = navigator.serviceWorker.register.bind(navigator.serviceWorker);
+navigator.serviceWorker.register = function(scriptURL, options) {
+    try {
+        const url = new URL(scriptURL, location.origin);
+        if (url.origin !== location.origin) {
+            console.warn(`lethal.js: blocked cross-origin SW registration: ${scriptURL}`);
+            return Promise.resolve();
+        }
+    } catch {}
+    return _originalRegister(scriptURL, options);
+};
+
 //////////////////////////////
 ///          Init          ///
 //////////////////////////////
@@ -43,16 +55,16 @@ async function registerSW() {
 
 	await navigator.serviceWorker.register(stockSW);
 }
-await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.bundle.js");
-await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.config.js");
+await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/violet/violet.bundle.js");
+await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/violet/violet.config.js");
 
-await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js");
+await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js");
 const { ScramjetController } = window.$scramjetLoadController();
 const scramjet = new ScramjetController({
 	files: {
-		wasm: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/wasm.wasm",
-		all: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js",
-		sync: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/scram/embed-partnerscripts.ACSHASH1ce21d38f84f2986b3a781f27298cfca.min.js",
+		wasm: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/scram/wasm.wasm",
+		all: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/scram/featurecontrol.ACSHASHf120033122e43a4cb0b53bb306afc5dc.min.js",
+		sync: "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/scram/embed-partnerscripts.ACSHASH1ce21d38f84f2986b3a781f27298cfca.min.js",
 	},
 	flags: {
 		rewriterLogs: false,
@@ -122,8 +134,8 @@ export function getWisp() {
 export async function setProxy(proxy) {
 	console.log(`lethal.js: proxy backend is ${proxy}`);
 	if (proxy === "violet") {
-		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.bundle.js");
-		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/violet/violet.config.js");
+		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/violet/violet.bundle.js");
+		await import("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/violet/violet.config.js");
 	}
 	proxyOption = proxy;
 }

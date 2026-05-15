@@ -4,7 +4,7 @@ var grid = document.querySelector(".gs");
 var search = document.querySelector(".textbook");
 var cat = document.querySelector("select");
 
-fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/celestialisbest/assets/json/tools.json")
+fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/json/tools.json")
   .then(res => res.json())
   .then(games => {
     function showGames(list) {
@@ -14,7 +14,7 @@ fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/ce
         card.className = "card";
         card.onclick = () =>
             location.href = `/celestialisbest/tab.html?autofill=${encodeURIComponent(g.url)}`;
-        card.innerHTML = `<div class="thumb" style="background-image:url('${g.img || "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/celestialisbest/assets/img/placeholder.png"}')"></div><p>${g.name}</p>`;
+        card.innerHTML = `<div class="thumb" style="background-image:url('${g.img || "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/img/placeholder.png"}')"></div><p>${g.name}</p>`;
         grid.appendChild(card);
       });
     }

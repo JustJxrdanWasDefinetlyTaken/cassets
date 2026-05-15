@@ -3,9 +3,9 @@
 // no homo..
 
 // inject lithium/lethal.js from rohan
-import { currentFrame } from "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/celestialisbest/lithium.mjs";
+import { currentFrame } from "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/lithium.mjs";
 // fetch json
-const exts = await fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@latest/celestialisbest/assets/json/ext.json").then(r => r.json());
+const exts = await fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/json/ext.json").then(r => r.json());
 
 if (currentFrame) {
   currentFrame.addEventListener("load", () => {
