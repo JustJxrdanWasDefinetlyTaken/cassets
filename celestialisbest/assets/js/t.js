@@ -14,7 +14,7 @@ fetch("https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/cele
         card.className = "card";
         card.onclick = () =>
             location.href = `/celestialisbest/tab.html?autofill=${encodeURIComponent(g.url)}`;
-        card.innerHTML = `<div class="thumb" style="background-image:url('${g.img || "https://cdn.jsdelivr.net/gh/JustJxrdanWasDefinetlyTaken/cassets@main/celestialisbest/assets/img/placeholder.png"}')"></div><p>${g.name}</p>`;
+        card.innerHTML = `<div class="thumb"><img decoding="async" src="${g.img}" alt="${g.name}"></div><p>${g.name}</p>`;
         grid.appendChild(card);
       });
     }
